@@ -48,7 +48,7 @@ jobs:
         run: |
           cd MonitorExport/Terraform
  
-          terraform init
+          terraform init -reconfigure
  
       - name: Terraform Validate
         run: |
