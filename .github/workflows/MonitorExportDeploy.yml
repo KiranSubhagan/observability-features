@@ -26,8 +26,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::123456789012:role/github-actions-role
-          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: arn:aws:iam::387219500106:role/github_oidc_role
+          aws-region: ap-south-1
  
       - name: Setup Python
         uses: actions/setup-python@v5
