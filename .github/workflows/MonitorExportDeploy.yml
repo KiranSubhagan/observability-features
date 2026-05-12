@@ -52,18 +52,18 @@ jobs:
  
       - name: Terraform Validate
         run: |
-          cd terraform
+          cd MonitorExport/Terraform
  
           terraform validate
  
       - name: Terraform Plan
         run: |
-          cd terraform
+          cd MonitorExport/Terraform
  
           terraform plan
  
       - name: Terraform Apply
         run: |
-          cd terraform
+          cd MonitorExport/Terraform
  
           terraform apply -auto-approve
