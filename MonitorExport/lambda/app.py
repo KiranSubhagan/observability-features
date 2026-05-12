@@ -26,7 +26,9 @@ def lambda_handler(event, context):
     writer.writerow([
         "id",
         "name",
-        "type"
+        "type",
+        "query",
+        "tags"
     ])
  
     for monitor in monitors:
@@ -34,21 +36,23 @@ def lambda_handler(event, context):
         writer.writerow([
             monitor.get("id"),
             monitor.get("name"),
-            monitor.get("type")
+            monitor.get("type"),
+            monitor.get("query"),
+            monitor.get("tags")
         ])
  
     csv_content = csv_buffer.getvalue()
  
     msg = MIMEMultipart()
  
-    msg["Subject"] = "Datadog Monitor Export"
+    msg["Subject"] = "Datadog Monitors exported Monnthly"
  
     msg["From"] = SENDER
  
     msg["To"] = RECEIVER
  
     body = MIMEText(
-        "Attached is the Datadog monitor export CSV."
+        "Monthly Monitor lists. Total monitors $(len(monitors)"
     )
  
     msg.attach(body)
