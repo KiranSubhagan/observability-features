@@ -5,6 +5,10 @@ variable "aws_region" {
 variable "lambda_name" {
   default = "monitor-export"
 }
+
+output "lambda_arn" {
+  value = aws_lambda_function.monitor_export.arn
+}
  
 variable "sender_email" {}
  
