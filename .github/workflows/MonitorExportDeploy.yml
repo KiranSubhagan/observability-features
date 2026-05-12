@@ -35,7 +35,7 @@ jobs:
  
       - name: Package Lambda
         run: |
-          cd lambda
+          cd MonitorExport/lambda
  
           chmod +x zip.sh
  
