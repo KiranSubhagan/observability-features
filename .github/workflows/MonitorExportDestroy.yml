@@ -14,8 +14,7 @@ jobs:
  
     runs-on: ubuntu-latest
  
-    env:
-      AWS_REGION: ap-south-1
+
  
     steps:
  
